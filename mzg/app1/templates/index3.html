@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e9edc9, #dda15e);
+    padding: 10px;
+}
+
+.container{
+    width: 100%;
+    max-width: 60%;
+    background: #fefae0;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.h1Tag{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #554640;
+}
+
+.formTag{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #554640; padding-top: 20px;
+}
+
+#submitButton, #bombaButton{
+
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#output{
+    text-align: center;
+}
+
+.btnDiv{
+    padding-top: 17px;
+}
+
+.outputDiv{
+    padding-top: 20px;
+}
+</style>
+
+<body>
+
+    <div class="container">
+        <h1 class="h1Tag">{{title}}</h1> <br> <br>
+
+        <p>{{myvar}}</p>
+        <br><br>
+        <button id="bombaButton" onclick="main()">
+            Wróć
+        </button>
+    </div>
+    
+    <script>
+        function main(){
+            window.location.href = "/";
+        }
+
+        
+    </script>
+</body>
+</html>

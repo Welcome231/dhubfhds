@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      
+
+        
+    </style>
+
+</head>
+<body>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    
+    body{
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #e9edc9, #dda15e);
+        padding: 10px;
+    }
+    
+    .container{
+        width: 100%;
+        max-width: 540px;
+        background: #fefae0;
+        margin: 100px auto 20px;
+        padding: 40px 30px 70px;
+        border-radius: 10px;
+    }
+    
+    .h1Tag{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #554640;
+    }
+    
+    .formTag{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #554640; padding-top: 20px;
+    }
+    
+    #submitButton, #bombaButton, #yees{
+    
+      background-color: rgba(51, 51, 51, 0.05);
+      border-radius: 8px;
+      border-width: 0;
+      color: #333333;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 10px 12px;
+      text-align: center;
+      transition: all 200ms;
+      vertical-align: baseline;
+      white-space: nowrap;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    
+    #output{
+        text-align: center;
+    }
+    
+    .btnDiv{
+        padding-top: 17px;
+    }
+    
+    .outputDiv{
+        padding-top: 20px;
+    }
+
+    #h2id{
+        color: #554640;
+    }
+
+    .newClass{
+        padding-top: 60px;
+        text-align: center;
+    }
+    </style>
+    
+    <body>
+    
+        <div class="container">
+            <h1 class="h1Tag">Wyszukaj pojęcię: </h1>
+    
+            <form class="formTag" method="post">
+                {% csrf_token %}
+                <label for="if">Szukaj: </label> <br>
+                <input type="text" id="if" name="if">
+                <br><br>
+                <input type="submit" value="Szukaj" id="yees">       
+                
+            </form> 
+            
+            <div class="newClass">
+                <h2 id="h2id">Zapisz pojęcię: </h2> <br> 
+                <button id="bombaButton" onclick="main()">zacznij pisać</button>
+            </div>
+            
+            
+                
+            </button>
+        </div>
+        
+        <script>
+            function main(){
+                window.location.href = "/create";
+            }
+    
+            
+        </script>
+</html>
